@@ -6,3 +6,17 @@
  * - Create several objects using the class.
  * - Test the objecs by calling their properties and using their methods in the console.
  */
+
+import Keyboard from "./Keyboard.js";
+
+const myKeyboard = new Keyboard(
+  "Mechanical",
+  104,
+  false,
+  true,
+  "CherryMX",
+  "Brown",
+  "00FF00"
+);
+
+console.log("The myKeyboard object:", myKeyboard);
