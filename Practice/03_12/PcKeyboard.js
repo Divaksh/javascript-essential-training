@@ -1,4 +1,4 @@
-class Keyboard {
+class PcKeyboard {
   constructor(
     // Defines parameters:
     keyboardType,
@@ -33,4 +33,4 @@ class Keyboard {
   }
 }
 
-export default Keyboard;
+export default PcKeyboard;
