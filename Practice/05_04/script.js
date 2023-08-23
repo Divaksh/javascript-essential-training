@@ -16,6 +16,11 @@ on that variable to find one of its children. */
 const lidStatus = document.querySelector("li:last-child");
 lidStatus.innerHTML = "Lid status: opened";
 
+//Selecting parent element and changing color
+const parentElement = lidStatus.parentNode;
+const childElement = parentElement.childNodes;
+childElement[1].style.backgroundColor = "FF0000";
+
 //Change the background of all bag titles/h1 tags
 document
   .querySelectorAll("h1")
