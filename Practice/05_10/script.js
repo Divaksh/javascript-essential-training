@@ -19,7 +19,7 @@ const everydayPack = new Backpack(
   26,
   false,
   "December 5, 2018 15:00:00 PST",
-  "../assets/images/everyday.svg"
+  "../../assets/images/everyday.svg"
 );
 
 const content = `
@@ -60,3 +60,32 @@ newArticle.setAttribute("id", "everyday");
 newArticle.innerHTML = content;
 
 main.append(newArticle);
+
+/**
+ * Add a navigation section to the DOM
+ */
+
+//Creating menu content to inject in HTML
+const menuContent = `<li><a href="#">Home</a></li>
+                      <li><a href="#">About</a></li>
+                      <li><a href="#">Downloads</a></li>
+                      <li><a href="#">Profile</a></li>
+                      <li><a href="#">Contact</a></li>
+                      <li><a href="#">Help</a></li>`;
+
+//Crated div for main navigation
+const navigation = document.createElement("div");
+//Adding and setting class attribute navigation div
+navigation.setAttribute("class", "nav");
+//Created ul to carray the menu
+const menu = document.createElement("ul");
+//Adding and setting id attribute to menu ul
+menu.setAttribute("id", "menu");
+//Added the menu content into the menu ul
+menu.innerHTML = menuContent;
+//Appened the menu content to the navigation div
+navigation.append(menu);
+//selecting the header by class
+const siteHeader = document.querySelector(".siteheader");
+//appeding the navigation conent into the header.
+siteHeader.append(navigation);
